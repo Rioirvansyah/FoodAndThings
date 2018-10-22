@@ -19,15 +19,27 @@ Requirment			:
 List Class yang digunakan	:
 
 Home	Untuk mengolah nilai yang digunakan untuk memanggil kelas lain
+
 Login	Menghandle data dan juga shared Preference untuk activity login
+
 MainActivity	Class utama android untuk menghandle semua data dan adapter
+
 RecyclerAdapter	Adapter yang digunakan untuk recycler view
+
 DataHelper	Membuat Helper untuk mengolah database dan tabel menggunakan SQLite
+
 Data	Halaman utama untuk menampilkan data dari SQLite database
+
 TabAdapter	Adapter yang digunakan untuk mengelola layoutTab
+
 TambahData	Untuk mengelola dan menghandle seluruh class tambah data
+
 TampilData	Untuk mengelola dan menghandle seluruh class tampil data
+
 Edit Data	Untuk mengelola dan menghandle seluruh class edit data
+
 FragmentHome	Menghandle seluruh aktifitas jalannya pada Home
+
 FragmentMaps	Menghandle seluruh aktifitas jalannya pada Maps
+
 FragmentNotification	Menghandle seluruh aktifitas jalannya pada Notifications
