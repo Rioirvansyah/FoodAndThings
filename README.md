@@ -4,6 +4,7 @@ Kelompok 9
 Nama Kelompok 		:
 1.	Estiti Hariadi	(1531140013) 	/09
 2.	Rio Irvansyah	(1631710048)	/25
+
 Judul Aplikasi			:
 FoodAndThings (FAT)
 Deskripsi Aplikasi		:
