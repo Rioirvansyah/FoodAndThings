@@ -7,12 +7,17 @@ Nama Kelompok 		:
 
 Judul Aplikasi			:
 FoodAndThings (FAT)
+
 Deskripsi Aplikasi		:
-			Aplikasi FoodAndThings adalah sebuah aplikasi yang memberikan informasi mengenai beberapa kumpulan kuliner makanan yang dijelaskan secara detail mulai dari Menu makanan, daerah makanan tersebut dijual hingga memuat harga menu makanan.
+
+Aplikasi FoodAndThings adalah sebuah aplikasi yang memberikan informasi mengenai beberapa kumpulan kuliner makanan yang dijelaskan secara detail mulai dari Menu makanan, daerah makanan tersebut dijual hingga memuat harga menu makanan.
+
 Requirment			:
 1.	Android OS	: 4.4 (KitKat)
 2.	Level		: API 19
+
 List Class yang digunakan	:
+
 Home	Untuk mengolah nilai yang digunakan untuk memanggil kelas lain
 Login	Menghandle data dan juga shared Preference untuk activity login
 MainActivity	Class utama android untuk menghandle semua data dan adapter
