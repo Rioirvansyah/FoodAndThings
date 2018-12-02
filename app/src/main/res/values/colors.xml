@@ -3,8 +3,4 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="putih">#FFFFFF</color>
-    <color name="putihgelap">#B0BEC5</color>
-    <color name="hitam">#263238</color>
-    <color name="merah">#B71C1C</color>
 </resources>
