@@ -32,18 +32,19 @@ public class Login extends AppCompatActivity {
         this.txtPassword = this.findViewById(R.id.txt_password);
 
     }
-    private void simpanLogin() {
-        SharedPreferences handler = this.getPreferences(Context.MODE_PRIVATE);
-
-        SharedPreferences.Editor editor = handler.edit();
-
-        editor.putString("username", this.txtUsername.getText().toString());
-        editor.putString("password", this.txtPassword.getText().toString());
-
-        editor.apply();
-    }
     public void button_onClick(View view) {
         this.login();
+    }
+
+    private void simpanDataLogin() {
+        SharedPreferences handler = this.getSharedPreferences("key", Context.MODE_PRIVATE);
+
+        String username = handler.getString("username", "");
+        String password = handler.getString("password", "");
+
+        boolean loginCorrect = this.cekLogin(username, password);
+        if (loginCorrect)
+            this.openPage(username);
     }
 
     private void login() {
@@ -67,16 +68,24 @@ public class Login extends AppCompatActivity {
         }
     }
 
-    private void simpanDataLogin() {
-        SharedPreferences handler = this.getPreferences(Context.MODE_PRIVATE);
-
-        String username = handler.getString("username", "");
-        String password = handler.getString("password", "");
-
-        boolean loginCorrect = this.cekLogin(username, password);
-        if (loginCorrect)
-            this.openPage(username);
+    private boolean cekLogin(String username, String password) {
+        if(username.equals("admin") && password.equals("admin"))
+            return  true;
+        else
+            return false;
     }
+
+    private void simpanLogin() {
+        SharedPreferences handler = this.getSharedPreferences("key", Context.MODE_PRIVATE);
+
+        SharedPreferences.Editor editor = handler.edit();
+
+        editor.putString("username", this.txtUsername.getText().toString());
+        editor.putString("password", this.txtPassword.getText().toString());
+
+        editor.apply();
+    }
+
 
     private void openPage(String username) {
         Intent i = new Intent(this.getApplicationContext(), MainActivity.class);
@@ -84,11 +93,6 @@ public class Login extends AppCompatActivity {
         this.startActivity(i);
     }
 
-    private boolean cekLogin(String username, String password) {
-        if(username.equals("admin") && password.equals("admin"))
-            return  true;
-        else
-            return false;
-    }
+
 
 }
