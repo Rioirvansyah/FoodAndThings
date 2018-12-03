@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgMakanan"
+            android:layout_centerHorizontal="true"
+            android:layout_width="350dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/user" />
+
+        <TextView
+            android:id="@+id/tvIdMakanan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="ID Makanan"
+            android:layout_below="@+id/imgMakanan"
+            android:layout_alignParentEnd="true"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/tvMenuMakanan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Menu Makanan"
+            android:layout_below="@id/tvIdMakanan"
+            />
+
+
+        <TextView
+            android:id="@+id/tvHargaMakanan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Harga Makanan"
+            android:layout_below="@id/tvMenuMakanan"
+            />
+        <TextView
+            android:id="@+id/tvDeskripsiMakanan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Deskripsi Makanan"
+            android:layout_below="@id/tvHargaMakanan"
+            />
+        <TextView
+            android:id="@+id/tvIdKategori"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Id Kategori"
+            android:layout_below="@id/tvDeskripsiMakanan"
+            />
+        <TextView
+            android:id="@+id/tvIdWilayah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Id Wilayah"
+            android:layout_below="@id/tvIdKategori"
+            />
+    </RelativeLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_pluswhite" />
+
+    <View
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"/>
+
+
+</LinearLayout>

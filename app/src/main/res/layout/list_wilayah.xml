@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tvIdWilayah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="ID Wilayah"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/tvNamaWilayah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Nama Wilayah"
+            android:layout_below="@id/tvIdWilayah"
+            />
+        <TextView
+            android:id="@+id/tvKota"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Kota"
+            android:layout_below="@id/tvNamaWilayah"
+            />
+
+    </RelativeLayout>
+    <View
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"/>
+
+</LinearLayout>
