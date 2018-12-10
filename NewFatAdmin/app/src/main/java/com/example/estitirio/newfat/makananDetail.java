@@ -51,84 +51,84 @@ public class makananDetail extends AppCompatActivity {
 
         mApiInterface = ApiClient.getClient().create(ApiInterface.class);
 
-        btUpdate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Call<CRUDMakanan> updatePembelianCall = mApiInterface.putMakanan(
-                        edtIdMakanan.getText().toString(),
-                        edtMenuMakanan.getText().toString(),
-                        edtHargaMakanan.getText().toString(),
-                        edtDeskripsiMakanan.getText().toString(),
-                        edtIdKategori.getText().toString(),
-                        edtIdWilayah.getText().toString());
-
-                updatePembelianCall.enqueue(new Callback<CRUDMakanan>() {
-                    @Override
-                    public void onResponse(Call<CRUDMakanan> call, Response<CRUDMakanan> response) {
-                        tvMessage.setText(" Retrofit Update: " +
-                                "\n " + " Status Update : " +response.body().getStatus() +
-                                "\n " + " Message Update : "+ response.body().getMessage());
-                    }
-
-                    @Override
-                    public void onFailure(Call<CRUDMakanan> call, Throwable t) {
-                        tvMessage.setText("Retrofit Update: \n Status Update :"+ t.getMessage());
-                    }
-                });
-            }
-        });
-
-        btInsert.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Call<CRUDMakanan> postPembelianCall = mApiInterface.postMakanan(
-                        edtIdMakanan.getText().toString(),
-                        edtMenuMakanan.getText().toString(),
-                        edtHargaMakanan.getText().toString(),
-                        edtDeskripsiMakanan.getText().toString(),
-                        edtIdKategori.getText().toString(),
-                        edtIdWilayah.getText().toString());
-                postPembelianCall.enqueue(new Callback<CRUDMakanan>() {
-                    @Override
-                    public void onResponse(Call<CRUDMakanan> call, Response<CRUDMakanan> response) {
-                        tvMessage.setText(" Retrofit Insert: " +
-                                "\n " + " Status Insert : " +
-                                response.body().getStatus() +
-                                "\n " + " Message Insert : "+ response.body().getMessage());
-                    }
-
-                    @Override
-                    public void onFailure(Call<CRUDMakanan> call, Throwable t) {
-                        tvMessage.setText("Retrofit Insert: \n Status Insert :"+ t.getMessage());
-                    }
-                });
-            }
-        });
-
-        btDelete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (!edtIdMakanan.getText().toString().trim().isEmpty()){
-
-                    Call<CRUDMakanan> deletePembelian = mApiInterface.deleteMakanan(edtIdMakanan.getText().toString());
-                    deletePembelian.enqueue(new Callback<CRUDMakanan>() {
-                        @Override
-                        public void onResponse(Call<CRUDMakanan> call, Response<CRUDMakanan> response) {
-                            tvMessage.setText(" Retrofit Delete: " +
-                                    "\n " + " Status Delete : " +response.body().getStatus() +
-                                    "\n " + " Message Delete : "+ response.body().getMessage());
-                        }
-
-                        @Override
-                        public void onFailure(Call<CRUDMakanan> call, Throwable t) {
-                            tvMessage.setText("Retrofit Delete: \n Status Delete :"+ t.getMessage());
-                        }
-                    });
-                }else{
-                    tvMessage.setText("id_pembelian harus diisi");
-                }
-            }
-        });
+//        btUpdate.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Call<CRUDMakanan> updatePembelianCall = mApiInterface.putMakanan(
+//                        edtIdMakanan.getText().toString(),
+//                        edtMenuMakanan.getText().toString(),
+//                        edtHargaMakanan.getText().toString(),
+//                        edtDeskripsiMakanan.getText().toString(),
+//                        edtIdKategori.getText().toString(),
+//                        edtIdWilayah.getText().toString());
+//
+//                updatePembelianCall.enqueue(new Callback<CRUDMakanan>() {
+//                    @Override
+//                    public void onResponse(Call<CRUDMakanan> call, Response<CRUDMakanan> response) {
+//                        tvMessage.setText(" Retrofit Update: " +
+//                                "\n " + " Status Update : " +response.body().getStatus() +
+//                                "\n " + " Message Update : "+ response.body().getMessage());
+//                    }
+//
+//                    @Override
+//                    public void onFailure(Call<CRUDMakanan> call, Throwable t) {
+//                        tvMessage.setText("Retrofit Update: \n Status Update :"+ t.getMessage());
+//                    }
+//                });
+//            }
+//        });
+//
+//        btInsert.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Call<CRUDMakanan> postPembelianCall = mApiInterface.postMakanan(
+//                        edtIdMakanan.getText().toString(),
+//                        edtMenuMakanan.getText().toString(),
+//                        edtHargaMakanan.getText().toString(),
+//                        edtDeskripsiMakanan.getText().toString(),
+//                        edtIdKategori.getText().toString(),
+//                        edtIdWilayah.getText().toString());
+//                postPembelianCall.enqueue(new Callback<CRUDMakanan>() {
+//                    @Override
+//                    public void onResponse(Call<CRUDMakanan> call, Response<CRUDMakanan> response) {
+//                        tvMessage.setText(" Retrofit Insert: " +
+//                                "\n " + " Status Insert : " +
+//                                response.body().getStatus() +
+//                                "\n " + " Message Insert : "+ response.body().getMessage());
+//                    }
+//
+//                    @Override
+//                    public void onFailure(Call<CRUDMakanan> call, Throwable t) {
+//                        tvMessage.setText("Retrofit Insert: \n Status Insert :"+ t.getMessage());
+//                    }
+//                });
+//            }
+//        });
+//
+//        btDelete.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                if (!edtIdMakanan.getText().toString().trim().isEmpty()){
+//
+//                    Call<CRUDMakanan> deletePembelian = mApiInterface.deleteMakanan(edtIdMakanan.getText().toString());
+//                    deletePembelian.enqueue(new Callback<CRUDMakanan>() {
+//                        @Override
+//                        public void onResponse(Call<CRUDMakanan> call, Response<CRUDMakanan> response) {
+//                            tvMessage.setText(" Retrofit Delete: " +
+//                                    "\n " + " Status Delete : " +response.body().getStatus() +
+//                                    "\n " + " Message Delete : "+ response.body().getMessage());
+//                        }
+//
+//                        @Override
+//                        public void onFailure(Call<CRUDMakanan> call, Throwable t) {
+//                            tvMessage.setText("Retrofit Delete: \n Status Delete :"+ t.getMessage());
+//                        }
+//                    });
+//                }else{
+//                    tvMessage.setText("id_pembelian harus diisi");
+//                }
+//            }
+//        });
 
         btBack.setOnClickListener(new View.OnClickListener() {
             @Override

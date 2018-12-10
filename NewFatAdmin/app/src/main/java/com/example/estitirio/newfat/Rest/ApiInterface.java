@@ -4,7 +4,6 @@ import com.example.estitirio.newfat.model.CRUDKategori;
 import com.example.estitirio.newfat.model.CRUDMakanan;
 import com.example.estitirio.newfat.model.CRUDWilayah;
 import com.example.estitirio.newfat.model.GetKategori;
-import com.example.estitirio.newfat.model.GetLogin;
 import com.example.estitirio.newfat.model.GetMakanan;
 import com.example.estitirio.newfat.model.GetWilayah;
 
@@ -25,62 +24,62 @@ import retrofit2.http.Part;
  */
 
 public interface ApiInterface {
-//
-//    /********* PEMBELI *********/
-//    @GET("makanan/all")
-//    Call<GetMakanan> getMakanan();
-//
-//    @Multipart
-//    @POST("makanan/all")
-//    Call<GetMakanan> postMakanan(
-//            @Part MultipartBody.Part file,
-//            @Part("menu_makanan") RequestBody menuMakanan,
-//            @Part("harga_makanan") RequestBody hargaMakanan,
-//            @Part("deskripsi_makanan") RequestBody deskripsiMakanan,
-//            @Part("action") RequestBody action
-//    );
-//
-//    @Multipart
-//    @POST("makanan/all")
-//    Call<GetMakanan> putMakanan(
-//            @Part MultipartBody.Part file,
-//            @Part("id_makanan") RequestBody idMakanan,
-//            @Part("menu_makanan") RequestBody menuMakanan,
-//            @Part("harga_makanan") RequestBody hargaMakanan,
-//            @Part("deskripsi_makanan") RequestBody deskripsiMakanan,
-//            @Part("action") RequestBody action
-//    );
-//
-//    @Multipart
-//    @POST("makanan/all")
-//    Call<GetMakanan> deleteMakanan(
-//            @Part("id_makanan") RequestBody idMakanan,
-//            @Part("action") RequestBody action
-//    );
 
-
-    @GET("makanan/")
+    /********* MAKANAN *********/
+    @GET("makanan/all")
     Call<GetMakanan> getMakanan();
 
-    @FormUrlEncoded
-    @POST("makanan2/")
-    Call<CRUDMakanan> postMakanan
-            (@Field("id_makanan") String idMakanan, @Field("menu_makanan") String menuMakanan,
-             @Field("harga_makanan") String hargaMakanan, @Field("deskripsi_makanan") String deskripsiMakanan,
-             @Field("id_kategori") String idKategori, @Field("id_wilayah") String idWilayah);
+    @Multipart
+    @POST("makanan/all")
+    Call<GetMakanan> postMakanan(
+            @Part MultipartBody.Part file,
+            @Part("menu_makanan") RequestBody menuMakanan,
+            @Part("harga_makanan") RequestBody hargaMakanan,
+            @Part("deskripsi_makanan") RequestBody deskripsiMakanan,
+            @Part("action") RequestBody action
+    );
 
-    @FormUrlEncoded
-    @PUT("makanan2/")
-    Call<CRUDMakanan> putMakanan(
-            @Field("id_makanan") String idMakanan, @Field("menu_makanan") String menuMakanan,
-            @Field("harga_makanan") String hargaMakanan, @Field("deskripsi_makanan") String deskripsiMakanan,
-            @Field("id_kategori") String idKategori, @Field("id_wilayah") String idWilayah);
+    @Multipart
+    @POST("makanan/all")
+    Call<GetMakanan> putMakanan(
+            @Part MultipartBody.Part file,
+            @Part("id_makanan") RequestBody idMakanan,
+            @Part("menu_makanan") RequestBody menuMakanan,
+            @Part("harga_makanan") RequestBody hargaMakanan,
+            @Part("deskripsi_makanan") RequestBody deskripsiMakanan,
+            @Part("action") RequestBody action
+    );
 
-    @FormUrlEncoded
-    @HTTP(method = "DELETE", path = "makanan2/", hasBody = true)
-    Call<CRUDMakanan> deleteMakanan(@Field("id_makanan") String idMakanan);
+    @Multipart
+    @POST("makanan/all")
+    Call<GetMakanan> deleteMakanan(
+            @Part("id_makanan") RequestBody idMakanan,
+            @Part("action") RequestBody action
+    );
 
-    //kategori
+
+//    @GET("makanan2/")
+//    Call<GetMakanan> getMakanan();
+//
+//    @FormUrlEncoded
+//    @POST("makanan2/")
+//    Call<CRUDMakanan> postMakanan
+//            (@Field("id_makanan") String idMakanan, @Field("menu_makanan") String menuMakanan,
+//             @Field("harga_makanan") String hargaMakanan, @Field("deskripsi_makanan") String deskripsiMakanan,
+//             @Field("id_kategori") String idKategori, @Field("id_wilayah") String idWilayah);
+//
+//    @FormUrlEncoded
+//    @PUT("makanan2/")
+//    Call<CRUDMakanan> putMakanan(
+//            @Field("id_makanan") String idMakanan, @Field("menu_makanan") String menuMakanan,
+//            @Field("harga_makanan") String hargaMakanan, @Field("deskripsi_makanan") String deskripsiMakanan,
+//            @Field("id_kategori") String idKategori, @Field("id_wilayah") String idWilayah);
+//
+//    @FormUrlEncoded
+//    @HTTP(method = "DELETE", path = "makanan2/", hasBody = true)
+//    Call<CRUDMakanan> deleteMakanan(@Field("id_makanan") String idMakanan);
+
+//    kategori
 
     @GET("kategori/")
     Call<GetKategori> getKategori();
@@ -119,15 +118,4 @@ public interface ApiInterface {
     @FormUrlEncoded
     @HTTP(method = "DELETE", path = "wilayah/", hasBody = true)
     Call<CRUDWilayah> deleteWilayah(@Field("id_wilayah") String idWilayah);
-
-
-    //login
-    @FormUrlEncoded
-    @POST("user/login")
-    Call<GetLogin> loginUser(
-            @Field("username") String username,
-            @Field("password") String password
-    );
-
-
 }

@@ -21,20 +21,10 @@
             android:layout_height="wrap_content"
             android:text="Get"/>
         <Button
-            android:id="@+id/btInsert"
+            android:id="@+id/btAddData"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Insert"/>
-        <Button
-            android:id="@+id/btUpdate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Update"/>
-        <Button
-            android:id="@+id/btDelete"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Delete"/>
+            android:text="Tambah Data"/>
 
     </LinearLayout>
     <android.support.v7.widget.RecyclerView
@@ -43,4 +33,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
     </android.support.v7.widget.RecyclerView>
+
+
 </LinearLayout>

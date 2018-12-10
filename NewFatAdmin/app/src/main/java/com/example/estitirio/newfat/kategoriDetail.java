@@ -117,7 +117,7 @@ public class kategoriDetail extends AppCompatActivity {
         btBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent mIntent = new Intent(getApplicationContext(), MainActivity.class);
+                Intent mIntent = new Intent(getApplicationContext(), kategori.class);
                 startActivity(mIntent);
             }
         });

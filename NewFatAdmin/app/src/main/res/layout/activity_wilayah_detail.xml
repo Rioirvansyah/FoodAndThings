@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/wilayahDetail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="15dp"
+    tools:context="com.example.estitirio.newfat.wilayahDetail">
+
+    <TextView
+        android:id="@+id/tvIdWilayah2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Id Wilayah : "
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/tvNamaWilayah2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama : "
+        android:layout_below="@id/tvIdWilayah2"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/tvKota2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kota : "
+        android:layout_below="@id/tvNamaWilayah2"
+        android:textSize="20sp"/>
+    <EditText
+        android:id="@+id/edtIdWilayah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="id Wilayah"
+        android:layout_toRightOf="@+id/tvIdWilayah2"
+        android:layout_alignBaseline="@+id/tvIdWilayah2"/>
+    <EditText
+        android:id="@+id/edtNamaWilayah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Nama Wilayah"
+        android:layout_alignBaseline="@+id/tvNamaWilayah2"
+        android:layout_alignLeft="@+id/edtIdWilayah"/>
+    <EditText
+        android:id="@+id/edtKota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Kota"
+        android:layout_alignBaseline="@+id/tvKota2"
+        android:layout_alignLeft="@+id/edtNamaWilayah"/>
+
+    <LinearLayout
+        android:id="@+id/Linearlayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/edtKota"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+        <Button
+            android:id="@+id/btInsert2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Insert"/>
+        <Button
+            android:id="@+id/btUpdate2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update"/>
+        <Button
+            android:id="@+id/btDelete2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete"/>
+        <Button
+            android:id="@+id/btBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tvMessage2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pesan"
+        android:layout_below="@+id/Linearlayout2"
+        android:textSize="20sp"
+        android:inputType="textMultiLine"/>
+
+</RelativeLayout>

@@ -23,15 +23,16 @@ public class Makanan {
     @SerializedName("id_wilayah")
     private String id_wilayah;
 
-    public Makanan(String id_makanan, String id_kategori, String menu_makanan, int harga_makanan, String deskripsi_makanan, String id_wilayah, String photoUrl, String action) {
+
+    public Makanan(String id_makanan, String menu_makanan, int harga_makanan, String deskripsi_makanan, String photoUrl, String action, String id_kategori, String id_wilayah) {
         this.id_makanan = id_makanan;
         this.menu_makanan = menu_makanan;
         this.harga_makanan = harga_makanan;
         this.deskripsi_makanan = deskripsi_makanan;
-        this.id_kategori = id_kategori;
-        this.id_wilayah = id_wilayah;
         this.photoUrl = photoUrl;
         this.action = action;
+        this.id_kategori = id_kategori;
+        this.id_wilayah = id_wilayah;
     }
 
     public String getId_makanan() {
@@ -74,17 +75,8 @@ public class Makanan {
         this.photoUrl = photoUrl;
     }
 
-    public String getAction() {
-        return action;
-    }
-
-    public void setAction(String action) {
-        this.action = action;
-    }
-
-
     public String getId_kategori() {
-        return id_kategori;
+        return action;
     }
 
     public void setId_kategori(String id_kategori) {
@@ -95,9 +87,7 @@ public class Makanan {
         return id_wilayah;
     }
 
-    public void setId_wilayah(String id_wilayah) {
+    public void setId_wilayah(String action) {
         this.id_wilayah = id_wilayah;
     }
-
-
 }

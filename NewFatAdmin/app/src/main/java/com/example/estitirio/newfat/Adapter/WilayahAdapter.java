@@ -1,5 +1,6 @@
 package com.example.estitirio.newfat.Adapter;
 
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.widget.TextView;
 
 import com.example.estitirio.newfat.R;
 import com.example.estitirio.newfat.model.Wilayah;
+import com.example.estitirio.newfat.wilayahDetail;
 
 import java.util.List;
 
@@ -38,18 +40,15 @@ public class WilayahAdapter extends RecyclerView.Adapter<WilayahAdapter.MyViewHo
         holder.mTextViewKota.setText("Kota :  " + mWilayahList.get(position)
                 .getKota());
 
-//        holder.itemView.setOnClickListener(new View.OnClickListener(){
-//            public void onClick(View view){
-//                Intent mIntent = new Intent(view.getContext(), makananDetail.class);
-//                mIntent.putExtra("id_makanan",mWilayahList.get(position).getId_makanan());
-//                mIntent.putExtra("menu_makanan",mWilayahList.get(position).getMenu_makanan());
-//                mIntent.putExtra("harga_makanan",String.valueOf(mWilayahList.get(position).getHarga_makanan()));
-//                mIntent.putExtra("deskripsi_makanan",mWilayahList.get(position).getDeskripsi_makanan());
-//                mIntent.putExtra("id_kategori",mWilayahList.get(position).getId_kategori());
-//                mIntent.putExtra("id_wilayah",mWilayahList.get(position).getId_wilayah());
-//                view.getContext().startActivity(mIntent);
-//            }
-//        });
+        holder.itemView.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view){
+                Intent mIntent = new Intent(view.getContext(), wilayahDetail.class);
+                mIntent.putExtra("id_wilayah",mWilayahList.get(position).getId_wilayah());
+                mIntent.putExtra("nama_wilayah",mWilayahList.get(position).getNama_wilayah());
+                mIntent.putExtra("kota",mWilayahList.get(position).getKota());
+                view.getContext().startActivity(mIntent);
+            }
+        });
     }
 
     @Override

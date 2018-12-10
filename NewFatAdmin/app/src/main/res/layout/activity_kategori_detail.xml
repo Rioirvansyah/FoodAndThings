@@ -8,7 +8,6 @@
     android:layout_margin="15dp"
     tools:context="com.example.estitirio.newfat.kategoriDetail">
 
-
     <TextView
         android:id="@+id/tvIdKategori2"
         android:layout_width="wrap_content"
@@ -19,7 +18,7 @@
         android:id="@+id/tvNamaKategori2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nama Kategori : "
+        android:text="Nama : "
         android:layout_below="@id/tvIdKategori2"
         android:textSize="20sp"/>
 
@@ -34,7 +33,7 @@
         android:id="@+id/edtNamaKategori"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Nama"
+        android:hint="Nama Kategori"
         android:layout_alignBaseline="@+id/tvNamaKategori2"
         android:layout_alignLeft="@+id/edtIdKategori"/>
 

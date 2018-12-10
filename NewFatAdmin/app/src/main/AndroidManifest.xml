@@ -22,7 +22,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity android:name=".makanan" />
         <activity android:name=".makananDetail" />
@@ -30,17 +29,8 @@
         <activity android:name=".wilayah" />
         <activity android:name=".kategoriDetail" />
         <activity android:name=".insertMakanan" />
-        <activity android:name=".LoginUser">
-            android:name=".MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
-        </activity>
+        <activity android:name=".wilayahDetail" />
+        <activity android:name=".editMakanan"></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context="com.example.rioir.fat.TampilData">
+
+
+    <TextView
+        android:id="@+id/id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_toEndOf="@+id/txtid"
+        android:text="Isi ID"
+        />
+
+    <TextView
+        android:id="@+id/txtid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/txtmenu"
+        android:text="ID"
+        />
+
+    <TextView
+        android:id="@+id/txtmenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/id"
+        android:layout_marginTop="20dp"
+        android:textAlignment="textEnd"
+        android:text="Menu"
+        />
+
+    <TextView
+        android:id="@+id/menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtmenu"
+        android:layout_alignBottom="@+id/txtmenu"
+        android:layout_alignStart="@+id/id"
+        android:text="Isi Menu"
+        />
+
+    <TextView
+        android:id="@+id/txtasal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtmenu"
+        android:layout_alignStart="@+id/txtmenu"
+        android:layout_marginTop="20dp"
+        android:textAlignment="textEnd"
+        android:text="Asal"
+        />
+
+    <TextView
+        android:id="@+id/asal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtasal"
+        android:layout_alignBottom="@+id/txtasal"
+        android:layout_alignStart="@+id/id"
+        android:text="Isi Asal"
+        />
+
+    <TextView
+        android:id="@+id/txtharga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtasal"
+        android:layout_alignStart="@+id/txtasal"
+        android:layout_marginTop="20dp"
+        android:textAlignment="textEnd"
+        android:text="Harga"
+        />
+
+    <TextView
+        android:id="@+id/harga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtharga"
+        android:layout_alignBottom="@+id/txtharga"
+        android:layout_alignStart="@+id/id"
+        android:text="Isi Harga"
+        />
+
+    <TextView
+        android:id="@+id/txtdeskripsi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtharga"
+        android:layout_alignStart="@+id/txtharga"
+        android:layout_marginTop="20dp"
+        android:textAlignment="textEnd"
+        android:text="Deskripsi"
+        />
+
+    <TextView
+        android:id="@+id/deskripsi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtdeskripsi"
+        android:layout_alignBottom="@+id/txtdeskripsi"
+        android:layout_alignStart="@+id/id"
+        android:text="Isi Deskripsi"
+        />
+
+    <Button
+        android:id="@+id/btn_kembali"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtid"
+        android:layout_below="@+id/txtdeskripsi"
+        android:layout_marginTop="30dp"
+        android:text="Kembali"
+        />
+</RelativeLayout>

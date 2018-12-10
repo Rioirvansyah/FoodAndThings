@@ -26,7 +26,7 @@ import retrofit2.Response;
 
 public class makanan extends AppCompatActivity {
 
-    Button btGet;
+    Button btGet, btnAddData;
 //            , btUpdate, btInsert, btDelete;
     ApiInterface mApiInterface;
     Context mContext;
@@ -39,16 +39,12 @@ public class makanan extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_makanan);
 
+        btnAddData = (Button) findViewById(R.id.btAddData);
         btGet = (Button) findViewById(R.id.btGet);
-//        btUpdate = (Button) findViewById(R.id.btUpdate);
-//        btInsert = (Button) findViewById(R.id.btInsert);
-//        btDelete = (Button) findViewById(R.id.btDelete);
-
+        mContext = getApplicationContext();
         mRecyclerView = findViewById(R.id.recyclerView);
-        mLayoutManager = new LinearLayoutManager(this);
+        mLayoutManager = new LinearLayoutManager(mContext);
         mRecyclerView.setLayoutManager(mLayoutManager);
-
-        mApiInterface  = ApiClient.getClient().create(ApiInterface.class);
 
         btGet.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,7 +54,7 @@ public class makanan extends AppCompatActivity {
                 mMakananCall.enqueue(new Callback<GetMakanan>() {
                     @Override
                     public void onResponse(Call<GetMakanan> call, Response<GetMakanan> response) {
-                        Log.d("Get Pembeli",response.body().getStatus());
+                        Log.d("Get Makanan",response.body().getStatus());
                         List<Makanan> listMakanan = response.body().getResult();
                         mAdapter = new MakananAdapter(listMakanan);
                         mRecyclerView.setAdapter(mAdapter);
@@ -66,65 +62,18 @@ public class makanan extends AppCompatActivity {
 
                     @Override
                     public void onFailure(Call<GetMakanan> call, Throwable t) {
-                        Log.d("Get Pembeli",t.getMessage());
+                        Log.d("Get Makanan",t.getMessage());
                     }
                 });
             }
         });
 
-
-//        btUpdate.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Call<CRUDMakanan> updateMakananCall = mApiInterface.putMakanan("1","Batagor","20000","enak","2","1");
-//                updateMakananCall.enqueue(new Callback<CRUDMakanan>() {
-//                    @Override
-//                    public void onResponse(Call<CRUDMakanan> call, Response<CRUDMakanan> response) {
-//                        Log.d("Retrofit Update", "Status Update: " + String.valueOf(response.body().getStatus()));
-//                    }
-//
-//                    @Override
-//                    public void onFailure(Call<CRUDMakanan> call, Throwable t) {
-//                        Log.d("Retrofit Update", t.getMessage());
-//                    }
-//                });
-//            }
-//        });
-//
-//        btInsert.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Call<CRUDMakanan> postMakananCall = mApiInterface.postMakanan("16", "Chicken","10000","Mantap","03","02");
-//                postMakananCall.enqueue(new Callback<CRUDMakanan>() {
-//                    @Override
-//                    public void onResponse(Call<CRUDMakanan> call, Response<CRUDMakanan> response) {
-//                        Log.d("Retrofit Insert", "Status Insert: " + String.valueOf(response.body().getStatus()));
-//                    }
-//
-//                    @Override
-//                    public void onFailure(Call<CRUDMakanan> call, Throwable t) {
-//                        Log.d("Retrofit Insert", t.getMessage());
-//                    }
-//                });
-//            }
-//        });
-//
-//        btDelete.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Call<CRUDMakanan> deleteMakanan = mApiInterface.deleteMakanan("16");
-//                deleteMakanan.enqueue(new Callback<CRUDMakanan>() {
-//                    @Override
-//                    public void onResponse(Call<CRUDMakanan> call, Response<CRUDMakanan> response) {
-//                        Log.i("Retrofit Delete", "Status Delete: " + String.valueOf(response.body().getStatus()));
-//                    }
-//
-//                    @Override
-//                    public void onFailure(Call<CRUDMakanan> call, Throwable t) {
-//                        Log.i("Retrofit Delete", t.getMessage());
-//                    }
-//                });
-//            }
-//        });
+        btnAddData.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, insertMakanan.class);
+                startActivity(intent);
+            }
+        });
     }
 }

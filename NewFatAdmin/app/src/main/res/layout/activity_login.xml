@@ -1,18 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/coba"
-    tools:context=".Login">
+    android:background="@drawable/grad"
+    android:padding="20dp"
+    tools:context="com.example.rioir.fat.Login">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/blank_top">
+
+    </View>
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/fat"
+        android:scaleType="fitStart"
+        />
+
+    <View
+        android:id="@+id/blank_mid"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_below="@id/logo">
+
+    </View>
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="120dp"
-        android:layout_alignParentStart="true"
-        android:layout_centerVertical="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="122dp"
         android:orientation="vertical">
 
         <EditText
@@ -20,9 +48,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Username"
-            android:textSize="30dp"
-            android:singleLine="false"
-            android:textColorHint="#ffffff" />
+            android:textColor="@color/putih"
+            android:textColorHint="#B0BEC5" />
 
         <EditText
 
@@ -30,11 +57,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Password"
-            android:textSize="30dp"
-            android:inputType="textPassword"
-            android:textColorHint="#ffffff" />
+            android:textColor="@color/putih"
+            android:textColorHint="#B0BEC5"
+            android:inputType="textPassword" />
 
     </LinearLayout>
+
     <Button
         android:id="@+id/btn_login"
         android:layout_width="217dp"
@@ -42,23 +70,27 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="71dp"
-        android:padding="12dp"
         android:onClick="button_onClick"
-        android:backgroundTint="@null"
+        android:padding="12dp"
+        android:textColor="@color/putih"
+        android:background="@drawable/mybutton"
         android:text="Login" />
+
     <View
         android:layout_width="match_parent"
         android:layout_height="10dp"
         android:layout_below="@id/btn_login"
         android:id="@+id/blank_bottom">
-
     </View>
+
     <CheckBox
         android:id="@+id/chk_remember"
+        android:textColor="@color/putih"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="21dp"
         android:text="remember" />
+
 </RelativeLayout>

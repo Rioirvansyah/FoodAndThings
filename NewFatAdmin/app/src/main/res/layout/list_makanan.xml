@@ -33,7 +33,6 @@
             android:layout_below="@id/tvIdMakanan"
             />
 
-
         <TextView
             android:id="@+id/tvHargaMakanan"
             android:layout_width="wrap_content"
@@ -46,31 +45,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="Deskripsi Makanan"
-            android:layout_below="@id/tvHargaMakanan"
-            />
+            android:layout_below="@id/tvHargaMakanan"/>
         <TextView
             android:id="@+id/tvIdKategori"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Id Kategori"
-            android:layout_below="@id/tvDeskripsiMakanan"
-            />
+            android:hint="ID Kategori"
+            android:layout_below="@id/tvDeskripsiMakanan"/>
         <TextView
             android:id="@+id/tvIdWilayah"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Id Wilayah"
-            android:layout_below="@id/tvIdKategori"
-            />
+            android:hint="ID Wilayah"
+            android:layout_below="@id/tvIdKategori"/>
     </RelativeLayout>
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        android:src="@drawable/ic_pluswhite" />
 
     <View
         android:background="@color/colorPrimary"
